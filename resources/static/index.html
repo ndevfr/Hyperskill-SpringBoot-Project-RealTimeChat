@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Chat</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div id="login-app-container">
+    <div id="login-container">
+        <img src="logo.png" alt="Logo" />
+        <input class="message-input" type="text" id="input-username" placeholder="Enter username...">
+        <button class="send-button" id="send-username-btn">Connect</button>
+    </div>
+</div>
+<div id="app-container" class="hidden">
+    <div id="app-logo"><img src="logo.png" /></div>
+    <div id="chat-infos-section">
+        <div id="current-chat">Public chat</div>
+        <button id="leave-chat-btn">Disconnect</button>
+    </div>
+    <div id="users">
+        <div id="users-list"></div>
+        <div class="chat-btn selected-chat" id="public-chat-btn">Public chat</div>
+    </div>
+    <div id="messages"></div>
+    <div id="controls">
+        <input type="text" id="input-msg" placeholder="Type a message..." />
+        <button id="send-msg-btn">
+            <img src="send-icon.png" alt="Send message" />
+        </button>
+    </div>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/sockjs-client/1.5.0/sockjs.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/stomp.js/2.3.3/stomp.min.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
